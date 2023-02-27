@@ -1,0 +1,44 @@
+{"frames": {
+
+"frame-1.png":
+{
+	"frame": {"x":0,"y":0,"w":275,"h":217},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":275,"h":217},
+	"sourceSize": {"w":275,"h":217}
+},
+"frame-2.png":
+{
+	"frame": {"x":275,"y":0,"w":275,"h":217},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":275,"h":217},
+	"sourceSize": {"w":275,"h":217}
+},
+"frame-3.png":
+{
+	"frame": {"x":550,"y":0,"w":275,"h":217},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":275,"h":217},
+	"sourceSize": {"w":275,"h":217}
+},
+"frame-4.png":
+{
+	"frame": {"x":825,"y":0,"w":275,"h":217},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":275,"h":217},
+	"sourceSize": {"w":275,"h":217}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "chickadee.png",
+	"format": "RGBA8888",
+	"size": {"w":1100,"h":217},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:133fa6e331474e560475591a9f3ad5ac:363facb240e6d68fb017433c8885aa79:eaf612e2066392123b2477656c0d15ec$"
+}
+}

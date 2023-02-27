@@ -1,0 +1,28 @@
+{"frames": {
+
+"croc_side_mouthclosed.png":
+{
+	"frame": {"x":0,"y":0,"w":219,"h":144},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":219,"h":144},
+	"sourceSize": {"w":219,"h":144}
+},
+"croc_side_mouthopen.png":
+{
+	"frame": {"x":219,"y":0,"w":219,"h":144},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":219,"h":144},
+	"sourceSize": {"w":219,"h":144}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "croco-bite.png",
+	"format": "RGBA8888",
+	"size": {"w":438,"h":144},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:a19dd24734a1651faed4b41f30cc3b92:42e8bda29278d5e9081d3e4e75adb8fc:4237db43546fa8f5d09564be91c50d14$"
+}
+}

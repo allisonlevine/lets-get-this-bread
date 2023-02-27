@@ -15,23 +15,27 @@ export default class Penguin extends Phaser.GameObjects.Container{
     }
     
     preUpdate(){
+        this.setAnimationsOnControl();
+    }
+
+    private setAnimationsOnControl() {
         const body = this.body as Phaser.Physics.Arcade.Body;
-        if(this.cursors.space?.isDown){
+        if (this.cursors.space?.isDown) {
             body.setAccelerationY(-600);
             this.penguin.play(AnimationNames.PenguinFall, true);
             this.enableCloud(true);
         }
-        else{
+        else {
             body.setAccelerationY(0);
         }
-        
-        if(body.blocked.down){
+
+        if (body.blocked.down) {
             this.penguin.play(AnimationNames.PenguinWalk, true);
             this.enableCloud(false);
         }
     }
 
-    enableCloud(enabled: boolean){
+    private enableCloud(enabled: boolean){
         this.cloud.setVisible(enabled);
     }
     
@@ -54,5 +58,13 @@ export default class Penguin extends Phaser.GameObjects.Container{
         const body = this.body as Phaser.Physics.Arcade.Body;
         body.setSize(this.penguin.width, this.penguin.height);
         body.setOffset(this.penguin.width * -0.5, -this.penguin.height);
+    }
+
+    kill(){
+        this.penguin.play(AnimationNames.PenguinDeath);
+        const body = this.body as Phaser.Physics.Arcade.Body;
+        body.setAccelerationY(0);
+        body.setVelocity(1000,0);
+        this.enableCloud(false);
     }
 }

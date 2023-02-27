@@ -7,7 +7,7 @@ Template from: https://github.com/kevinshen56714/create-react-phaser3-app
 
 Sound effect credit: https://freesound.org/ 
 
-Graphics credit: https://www.gameartguppy.com/
+Graphics credit: https://www.gameartguppy.com/ and http://bevouliin.com 
 
 Learn more about Phaser: https://phaser.io/
 

@@ -3,8 +3,9 @@ enum TextureNames
     Background = 'background',
     Penguin = 'penguin',
     Mushroom = 'mushroom',
-    Flower = 'flower',
-    Cloud = 'cloud'
+    Cloud = 'cloud',
+    Munchie = 'croco-bite',
+    Chicken = 'chickadee'
 
 }
 export default TextureNames;
