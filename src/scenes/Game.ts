@@ -31,6 +31,19 @@ export default class Game extends Phaser.Scene{
         this.addPhysicsOverlaps();
     }
 
+    update(time: number, delta: number): void {
+        this.updateBackground();
+        this.warpObject(0,1200,390,700,this.mushroom, this.mushroom.body as Phaser.Physics.Arcade.StaticBody);
+        this.warpObject(0,550,0,150,this.chicken, this.chicken.body as Phaser.Physics.Arcade.StaticBody);
+        this.warpObject(650,1200,150,200,this.chicken2, this.chicken2.body as Phaser.Physics.Arcade.StaticBody);
+        this.warpObject(0,1200,300,400,this.munchie, this.munchie.body as Phaser.Physics.Arcade.StaticBody);
+        this.warpObject(0,1200,500,640,this.munchie2, this.munchie2.body as Phaser.Physics.Arcade.StaticBody);
+    }
+
+    private addQuaso(){
+
+    }
+    
     private addPhysicsOverlaps() {
         this.physics.add.overlap(
             this.mushroom, this.penguin, this.handleOverlapBaddie, undefined, this
@@ -49,18 +62,10 @@ export default class Game extends Phaser.Scene{
         );
     }
 
-    update(time: number, delta: number): void {
-        this.updateBackground();
-        this.warpObject(0,1200,390,700,this.mushroom, this.mushroom.body as Phaser.Physics.Arcade.StaticBody);
-        this.warpObject(0,550,0,150,this.chicken, this.chicken.body as Phaser.Physics.Arcade.StaticBody);
-        this.warpObject(650,1200,150,200,this.chicken2, this.chicken2.body as Phaser.Physics.Arcade.StaticBody);
-        this.warpObject(0,1200,300,400,this.munchie, this.munchie.body as Phaser.Physics.Arcade.StaticBody);
-        this.warpObject(0,1200,500,640,this.munchie2, this.munchie2.body as Phaser.Physics.Arcade.StaticBody);
-    }
-
     private handleOverlapBaddie(obj1: Phaser.GameObjects.GameObject,
                                 obj2: Phaser.GameObjects.GameObject){
-        console.log('ope!');
+        const pengu2Die = obj2 as Penguin;
+        pengu2Die.kill();
     }
 
     private addBaddies(){
@@ -76,6 +81,9 @@ export default class Game extends Phaser.Scene{
 
     private addSound(){
         this.sound.add(AudioNames.Background, {loop: true}).play();
+        this.sound.add(AudioNames.Bounce);
+        this.sound.add(AudioNames.Quaso);
+        this.sound.add(AudioNames.Hurt);
     }
 
     private addBackgroundElements(){

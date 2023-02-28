@@ -11,7 +11,7 @@ export default class Preloader extends Phaser.Scene{
     }
 
     preload(){
-        this.loadBackground();
+        this.loadImages();
         this.addAtlas();
         this.loadSound();
     }
@@ -26,12 +26,14 @@ export default class Preloader extends Phaser.Scene{
         this.load.audio(AudioNames.Background, 'sounds/background.wav');
         this.load.audio(AudioNames.Bounce, 'sounds/jump.mp3');
         this.load.audio(AudioNames.Hurt, 'sounds/ouch.wav');
-        this.load.audio(AudioNames.Yum, 'sounds/yum.wav');
+        this.load.audio(AudioNames.Quaso, 'sounds/quaso.mp3');
     }
 
-    private loadBackground(){
+    private loadImages(){
         this.load.image(TextureNames.Background, 'background/bg_single_1.png');
         this.load.image(TextureNames.Mushroom, 'objects/object_mushroom.png');
+        this.load.image(TextureNames.Croissant, 'pastry_croissant.png');
+        
     }
     
     private addAtlas(){

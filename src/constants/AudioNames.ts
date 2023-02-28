@@ -1,7 +1,7 @@
 enum AudioNames{
     Background = 'background',
     Hurt = 'ouch',
-    Yum = 'yummy',
-    Bounce = 'jump'
+    Bounce = 'jump',
+    Quaso = 'quaso'
 }
 export default AudioNames;
