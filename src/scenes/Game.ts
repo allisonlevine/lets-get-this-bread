@@ -28,22 +28,34 @@ export default class Game extends Phaser.Scene{
         this.addBackgroundElements();
         this.addBaddies();
         this.addSound();
+        this.addPhysicsOverlaps();
+    }
+
+    private addPhysicsOverlaps() {
         this.physics.add.overlap(
-            this.mushroom,
-            this.penguin,
-            this.handleOverlapBaddie,
-            undefined,
-            this
+            this.mushroom, this.penguin, this.handleOverlapBaddie, undefined, this
+        );
+        this.physics.add.overlap(
+            this.chicken, this.penguin, this.handleOverlapBaddie, undefined, this
+        );
+        this.physics.add.overlap(
+            this.chicken2, this.penguin, this.handleOverlapBaddie, undefined, this
+        );
+        this.physics.add.overlap(
+            this.munchie, this.penguin, this.handleOverlapBaddie, undefined, this
+        );
+        this.physics.add.overlap(
+            this.munchie2, this.penguin, this.handleOverlapBaddie, undefined, this
         );
     }
 
     update(time: number, delta: number): void {
         this.updateBackground();
-        this.warpObject(100,1000,300,750,this.mushroom, this.mushroom.body as Phaser.Physics.Arcade.StaticBody);
-        this.warpObjectExtra(0,250,250,this.chicken);
-        this.warpObjectExtra(250,500,100,this.chicken2);
-        this.warpObjectExtra(500,750,400,this.munchie);
-        this.warpObjectExtra(750,1000,625,this.munchie2);
+        this.warpObject(0,1200,390,700,this.mushroom, this.mushroom.body as Phaser.Physics.Arcade.StaticBody);
+        this.warpObject(0,550,0,150,this.chicken, this.chicken.body as Phaser.Physics.Arcade.StaticBody);
+        this.warpObject(650,1200,150,200,this.chicken2, this.chicken2.body as Phaser.Physics.Arcade.StaticBody);
+        this.warpObject(0,1200,300,400,this.munchie, this.munchie.body as Phaser.Physics.Arcade.StaticBody);
+        this.warpObject(0,1200,500,640,this.munchie2, this.munchie2.body as Phaser.Physics.Arcade.StaticBody);
     }
 
     private handleOverlapBaddie(obj1: Phaser.GameObjects.GameObject,
@@ -52,9 +64,9 @@ export default class Game extends Phaser.Scene{
     }
 
     private addBaddies(){
-        this.chicken = new Chicken(this, 900, 1000);
+        this.chicken = new Chicken(this, 0, 50);
         this.munchie = new Munchie(this, 351, 768)
-        this.chicken2 = new Chicken(this, 900, 1000);
+        this.chicken2 = new Chicken(this, 100, 1000);
         this.munchie2 = new Munchie(this, 351, 768)
         this.add.existing(this.chicken);
         this.add.existing(this.munchie);
@@ -67,7 +79,7 @@ export default class Game extends Phaser.Scene{
     }
 
     private addBackgroundElements(){
-        this.mushroom = new Mushroom(this, 250, 550);
+       this.mushroom = new Mushroom(this, 250, 550);
        this.add.existing(this.mushroom);
     }
 
@@ -98,22 +110,15 @@ export default class Game extends Phaser.Scene{
         const scrollX = this.cameras.main.scrollX;
         const rightEdge = scrollX + this.scale.width;
         
-        
-        const width = physicsToWarp.width
+        const width = physicsToWarp.width;
         if(elementToWarp.x + width < scrollX){
             elementToWarp.x = Phaser.Math.Between(
                 rightEdge + edge1,
                 rightEdge + edge2
             );
-            elementToWarp.y = Phaser.Math.Between(edge3, edge4)
+            elementToWarp.y = Phaser.Math.Between(edge3, edge4);
             physicsToWarp.position.x = elementToWarp.x + physicsToWarp.offset.x;
             physicsToWarp.position.y = elementToWarp.y;
         }
-    }
-
-    private warpObjectExtra(edge1: number, edge2: number,edge3: number, elementToWarp: any){
-        const scrollY = this.cameras.main.scrollY;
-        //this.warpObject(edge1, edge2, edge3, elementToWarp);
-        elementToWarp.y = edge3;
     }
 }
