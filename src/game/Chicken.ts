@@ -9,15 +9,17 @@ export default class Chicken extends Phaser.GameObjects.Container{
         super(scene,x,y);
         const chicken = scene.add.sprite(0,0, TextureNames.Chicken)
                         .setFlipX(true)
+                        .setOrigin(0.5,0)
                         .play(AnimationNames.ChickenFly);
         
         this.add(chicken);
         scene.physics.add.existing(this,true);
-        const body = this.body as Phaser.Physics.Arcade.Body;
+
+        const body = this.body as Phaser.Physics.Arcade.StaticBody;
         const width = chicken.displayWidth;
         const height = chicken.displayHeight;
-        body.setSize(width,height);
-        body.setOffset(-width*0.5,0);
+        body.setSize(width, height - 12);
+        body.setOffset(-width * 0.5,0);
         body.position.x = this.x + body.offset.x;
         body.position.y = this.y;
     }

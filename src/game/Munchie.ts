@@ -13,11 +13,11 @@ export default class Munchie extends Phaser.GameObjects.Container{
 
         this.add(muncha);
         scene.physics.add.existing(this, true);
-        const body = this.body as Phaser.Physics.Arcade.Body;
-        const width = muncha.displayWidth;
-        const height = muncha.displayHeight;
+        const body = this.body as Phaser.Physics.Arcade.StaticBody;
+        const width = muncha.displayWidth-25;
+        const height = muncha.displayHeight-10;
         body.setSize(width,height);
-        body.setOffset(-width*0.5,0);
+        body.setOffset(-width*0.5,-1);
         body.position.x = this.x + body.offset.x;
         body.position.y = this.y;
     }
