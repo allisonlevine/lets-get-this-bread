@@ -18,8 +18,8 @@ export default class Chicken extends Phaser.GameObjects.Container{
         const body = this.body as Phaser.Physics.Arcade.StaticBody;
         const width = chicken.displayWidth;
         const height = chicken.displayHeight;
-        body.setSize(width, height - 12);
-        body.setOffset(-width * 0.5,0);
+        body.setSize(width*.95, height*.9);
+        body.setOffset(-body.width * 0.5,0);
         body.position.x = this.x + body.offset.x;
         body.position.y = this.y;
     }

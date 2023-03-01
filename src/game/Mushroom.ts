@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
 import TextureNames from '../constants/TextureNames';
-import AnimationNames from '../constants/AnimationNames';
 
 export default class Mushroom extends Phaser.GameObjects.Container{
     
