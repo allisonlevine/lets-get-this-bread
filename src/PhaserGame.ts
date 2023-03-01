@@ -17,4 +17,5 @@ const config: Phaser.Types.Core.GameConfig = {
   scene: [Preloader,Game,GameOver],
 };
 
-export default new Phaser.Game(config);
+const gameObj = new Phaser.Game(config);
+export default gameObj;
