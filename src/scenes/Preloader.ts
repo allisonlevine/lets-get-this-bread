@@ -32,7 +32,7 @@ export default class Preloader extends Phaser.Scene{
     private loadImages(){
         this.load.image(TextureNames.Background, 'background/bg_single_1.png');
         this.load.image(TextureNames.Mushroom, 'objects/object_mushroom.png');
-        this.load.image(TextureNames.Croissant, 'pastry_croissant.png');
+        this.load.image(TextureNames.Croissant, 'food/pastry_croissant.png');
         
     }
     
@@ -67,7 +67,6 @@ export default class Preloader extends Phaser.Scene{
     }
 
     private createPenguinAnimations(){
-
         this.anims.create({
             key: AnimationNames.PenguinWalk,
             frames: this.anims.generateFrameNames(TextureNames.Penguin,{
