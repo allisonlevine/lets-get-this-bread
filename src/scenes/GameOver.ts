@@ -8,7 +8,6 @@ export default class GameOver extends Phaser.Scene {
     }
 
     create() {
-        // object destructuring
         const { width, height } = this.scale;
         const x = width * 0.5;
         const y = height * 0.5;
@@ -25,7 +24,6 @@ export default class GameOver extends Phaser.Scene {
             this.scene.stop(SceneNames.GameOver);
             this.scene.stop(SceneNames.Game);
             this.scene.start(SceneNames.Game);
-            
         });
 
     }

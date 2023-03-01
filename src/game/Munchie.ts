@@ -16,8 +16,8 @@ export default class Munchie extends Phaser.GameObjects.Container{
         const body = this.body as Phaser.Physics.Arcade.StaticBody;
         const width = muncha.displayWidth-25;
         const height = muncha.displayHeight-10;
-        body.setSize(width,height);
-        body.setOffset(-width*0.5,-1);
+        body.setSize(width*.8,height*.9);  
+        body.setOffset(-width*0.4,0);
         body.position.x = this.x + body.offset.x;
         body.position.y = this.y;
     }
