@@ -10,7 +10,7 @@ Graphics credit: https://www.gameartguppy.com/ and http://bevouliin.com
 
 Learn more about Phaser: https://phaser.io/
 
-To download this project, download via git or zip!
+To download this project, download via git or zip! (By clicking on the green "Code <>" button up top)
 
 
 To get node: https://nodejs.org/en/download/ (download the installer for your system!)
