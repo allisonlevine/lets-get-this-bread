@@ -1,7 +1,6 @@
 # Phaser 3 + React App
 
 Always get your parents permission before downloading anything on to the family computer!
-Or don't, I'm a read me, not a cop.
 
 Template from: https://github.com/kevinshen56714/create-react-phaser3-app
 
@@ -16,6 +15,9 @@ To download this project, download via git or zip!
 
 To get node: https://nodejs.org/en/download/ (download the installer for your system!)
 You need node to run the npm (node package manager) scripts to run this code base.
+
+You'll also want a code editor, though it's not necessary it makes live easier.
+I use VSCode found here: https://code.visualstudio.com/
 
 ## Getting started
 For all of these commands run them in your command line, in the SAME folder as the package.json for this project.
