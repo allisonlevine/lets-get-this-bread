@@ -16,7 +16,7 @@ To download this project, download via git or zip! (By clicking on the green "Co
 To get node: https://nodejs.org/en/download/ (download the installer for your system!)
 You need node to run the npm (node package manager) scripts to run this code base.
 
-You'll also want a code editor, though it's not necessary it makes live easier.
+You'll also want a code editor, though it's not necessary it makes life easier.
 I use VSCode found here: https://code.visualstudio.com/
 
 ## Getting started
